@@ -1,7 +1,7 @@
 
 
-millasmariñas = int(input("Introduce cantidad en millas mariñas: "))
-metros = millasmariñas * 1852
-
-print(metros)
+millas_marinas = float(input("Qué longitud de millas quiere convertir: "))
+metros = 1852
+conversion = millas_marinas * metros
+print(conversion)
 
