@@ -131,3 +131,112 @@ class TorneoXestor:
 
     def sair(self):
         print("Saíndo do xestor do torneo...")
+-------------------------------------------------------------------------------------------
+#EJERCICIO RESUELTOS POR MI
+
+#EJERCICIO 1
+class Equipo:
+    def __init__(self, nome):
+        self.__nome = nome
+        self.__ganhados = 0
+        self.__perdidos = 0
+        self.__empatados = 0
+        self.puntos = []
+
+    def get_nome(self) -> str:
+        return self.__nome
+
+    def get_ganhados(self) -> int:
+        return self.__ganhados
+
+    def get_perdidos(self) -> int:
+        return self.__perdidos
+
+    def get_empatados(self) -> int:
+        return self.__empatados
+
+    def add_victoria(self) -> None:
+        self.__ganhados += 1
+
+    def add_perdido(self) -> None:
+        self.__perdidos += 1
+
+    def add_empate(self) -> None:
+        self.__empatados += 1
+
+    def get_puntos(self) -> int:
+            if self.__ganhados == 1:
+                self.puntos +=3
+            if self.__perdidos == 1:
+                self.puntos += 0
+            if self.__empatados == 1:
+                self.puntos += 1
+
+    def get_encontros_xogados(self) -> int:
+        return self.__ganhados + self.__perdidos + self.__empatados
+
+    def __str__(self):
+        return f"{self.__nome} - V: {self.__ganhados} E: {self.__empatados} D: {self.__perdidos} (Puntos: {self.puntos})"
+
+celta = Equipo("celta")
+----------------------------------------------------------------------------------------------------------------------------------
+#EJERCICIO 2
+class Torneo:
+    def __init__(self, nome, num_equipos):
+        self.__nome = nome
+        self.__equipos = [None]* num_equipos
+        self.__num_max_equipos = num_equipos
+        self.__num_equipos = 0
+        self.__equipos = []
+
+    def get_nome(self) -> str:
+        return self.__nome
+    def get_equipo(self, nome: str) -> Equipo | None:
+        for equipo in self.__equipos:
+            if equipo is not None and equipo.get_nome() == nome:
+                return equipo
+        return None
+
+    def add_equipo(self, equipo: Equipo) -> int:
+        if self.__num_equipos < self.__max_equipos:
+            self.__equipos[self.__num_equipos] = equipo
+            self.__num_equipos += 1
+            return True
+        return False
+
+    def get_equipos(self) -> list[Equipo | None]:
+        return self.__equipos
+
+    def get_clasificacion(self) -> list[Equipo]:
+        for i in range(self.__equipos):
+            if i < self.__equipos[1]:
+
+
+    def numero_equipos(self) -> int:
+        return self.__num_equipos
+-------------------------------------------------------------------------------------------
+#EJERCICIO 3
+class TorneoXestor:
+    def __init__(self, nome_torneo, num_max_equipos):
+        self.__nome_torneo = nome_torneo
+        self.__num_max_equipos = num_max_equipos
+        self.__nome_equipos = []
+
+    def rexistrar_resultado(self):
+        self.__nome_equipos
+
+    def mostrar_clasificacion(self):
+
+    def consultar_equipo(self):
+
+    def estadisticas_torneo(self):
+        self.
+
+    def sair(self):
+
+
+    :)
+
+
+
+
